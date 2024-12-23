@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../styles/scientific_calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <input type="text" id="display" placeholder="0" readonly>
+        <div id="functions">
+            <button class="function" onclick="calc.addToDisplay('mod')">mod</button>
+            <button class="function" onclick="calc.addToDisplay('^')">x<sup>y</sup></button>
+            <button class="function" onclick="calc.addToDisplay('inv(')">x<sup>-1</sup></button> 
+            <button class="function" onclick="calc.addToDisplay('sqrt(')">√</button>
+            <button class="function" onclick="calc.addToDisplay('sin(')">sin</button>
+            <button class="function" onclick="calc.addToDisplay('cos(')">cos</button>
+            <button class="function" onclick="calc.addToDisplay('tan(')">tan</button>
+            <button class="function" onclick="calc.addToDisplay('asin(')">asin</button>
+            <button class="function" onclick="calc.addToDisplay('acos(')">acos</button>
+            <button class="function" onclick="calc.addToDisplay('atan(')">atan</button>
+            <button class="function" onclick="calc.addToDisplay('log10(')">log</button>
+            <button class="function" onclick="calc.addToDisplay('ln(')">ln</button>
+        </div>
+        <div id="operators-numbers">
+            <button class="number" onclick="calc.addToDisplay('7')">7</button>
+            <button class="number" onclick="calc.addToDisplay('8')">8</button>
+            <button class="number" onclick="calc.addToDisplay('9')">9</button>
+            <button class="all-clear" onclick="calc.clearAll()">AC</button>
+            <button class="backspace" onclick="calc.backspace()">&#8592</button>
+            <button class="number" onclick="calc.addToDisplay('4')">4</button>
+            <button class="number" onclick="calc.addToDisplay('5')">5</button>
+            <button class="number" onclick="calc.addToDisplay('6')">6</button>
+            <button class="operator" onclick="calc.addToDisplay('+')">+</button>
+            <button class="operator" onclick="calc.addToDisplay('-')">-</button>
+            <button class="number" onclick="calc.addToDisplay('1')">1</button>
+            <button class="number" onclick="calc.addToDisplay('2')">2</button>
+            <button class="number" onclick="calc.addToDisplay('3')">3</button>
+            <button class="operator" onclick="calc.addToDisplay('*')">×</button>
+            <button class="operator" onclick="calc.addToDisplay('/')">÷</button>
+            <button class="number" onclick="calc.addToDisplay('0')">0</button>
+            <button class="brackets" onclick="calc.addToDisplay('(')">(</button>
+            <button class="brackets" onclick="calc.addToDisplay(')')">)</button>
+            <button class="dot" onclick="calc.addToDisplay('.')">.</button>
+            <button class="result" onclick="calc.evaluateExpression()">=</button>
+        </div>
+    </div>
+    <script src="../scripts/scientific_calculator.js"></script>
+</body>
+</html>

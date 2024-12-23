@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,13,0.46775206664697133) 40%, rgba(0,212,255,1) 100%);
+}
+
+.calculator {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+
+
+#functions .function {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    margin: 6px;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#operators-numbers .number, .operator, .result, .brackets, .dot, .all-clear, .backspace {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    margin: 8px;
+    background-color: #e9e7e7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+#operators-numbers .all-clear, .backspace {
+    background-color: orangered;
+}
+
+#functions .function:hover {
+    background-color: #ddd;
+}
+
+#operators-numbers .all-clear:hover {
+    background-color: #ddd;
+}
+
+.backspace:hover {
+    background-color: #ddd;
+}
+
+#operators-numbers .number:hover {
+    background-color:red;
+}
+
+#operators-numbers .brackets:hover {
+    background-color: violet;
+}
+
+#operators-numbers .result:hover {
+    background-color: greenyellow;
+}
+
+#operators-numbers .dot:hover {
+    background-color: lightblue;
+}
+
+#operators-numbers .operator:hover {
+    background-color: gold;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+
+
