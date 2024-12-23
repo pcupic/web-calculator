@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Converter</title>
+    <link rel="stylesheet" href="../styles/base_converter.css">
+</head>
+<body>
+    <div class="base-converter">
+        <h1>base converter</h1>
+        <p>enter the number to convert: </p>
+        <input type="number" name="input" id="input" placeholder="0">
+        <p>enter the source base: </p>
+        <input type="number" name="sourceBase" id="sourceBase" placeholder="0" min="2" max="36">
+        <p>enter the destination base: </p>
+        <input type="number" name="destinationBase" id="destinationBase" placeholder="0"  min="2" max="36">
+        <p>result: </p>
+        <input type="text" name="result" id="result" placeholder="0" readonly>
+        <div class="converter-clear-buttons">
+            <div class="clear-all" onclick="converter.clearAll()">clear all</div>
+            <div class="converter" onclick="converter.convert()">convert</div>
+        </div>
+    </div>
+    <script src="../scripts/base_converter.js"></script>
+</body>
+</html>
