@@ -1,0 +1,219 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.unit-converter {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    background: rgba(255, 255, 255, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+}
+
+.convert-clearall-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.unit-select, .input, .source-destination-units, .output{
+    font-size: medium;
+    font-family: monospace;
+    margin: 10px;
+}
+
+h1 {
+    font-size: larger;
+    letter-spacing: 1px;
+    font-family: monospace;
+}
+
+.source-destination-units {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.source-unit, .destination-unit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.convert-button, .clearall {
+    padding: 10px;
+    width: 170px;
+    font-family: monospace;
+    font-size: medium;
+    color: white;
+    background: black;
+    position: relative;
+    cursor: pointer;
+}
+
+.convert-button::before, .convert-button::after, .clearall::before, .clearall::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.convert-button::before, .clearall::before {
+    top: 0;
+    left: 0;
+    animation: border-top-right 3s infinite alternate;
+}
+
+.convert-button::after, .clearall::after {
+    bottom: 0;
+    right: 0;
+    animation: border-bottom-left 3s infinite alternate;
+}
+
+.clearall::before {
+    border-top: 2px solid #fccb06; 
+    border-right: 2px solid #fccb06; 
+}
+
+.clearall::after {
+    border-bottom: 2px solid #fccb06; 
+    border-left: 2px solid #fccb06; 
+}
+
+.convert-button::before {
+    border-top: 2px solid #50c878; 
+    border-right: 2px solid #50c878; 
+}
+
+.convert-button::after {
+    border-bottom: 2px solid #50c878; 
+    border-left: 2px solid #50c878; 
+}
+
+@keyframes border-top-right {
+    0% {width: 0px; height: 0px;}
+    50% {width: 190px; height: 0px;}
+    100% {width: 190px; height: 34px;}
+}
+
+@keyframes border-bottom-left {
+    0% {width: 0px; height: 0px;}
+    50% {width: 190px; height: 0px;}
+    100% {width: 190px; height: 34px;}
+}
+
+.source-unit {
+    margin-right: 50px;
+}
+
+.destination-unit {
+    margin-left: 50px;
+}
+
+.area:hover, .length:hover, .time:hover, .speed:hover, .mass:hover, .energy:hover, .pressure:hover, .data:hover, .volume:hover{
+    background: #333; 
+    box-shadow: 0 0 10px rgba(59, 65, 64, 0.8), 0 0 20px rgba(49, 51, 51, 0.5); 
+}
+
+.output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input, #output {
+    text-align: center;
+}
+
+.output label {
+    margin-bottom: 10px;
+}
+
+.output input {
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+}
+.input label {
+    margin-bottom: 10px; 
+    display: block;
+}
+
+.unit-select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.unit-select div {
+    letter-spacing: 1px;
+    background-color: black;
+    color: white;
+    width: 100px;
+    padding: 5px;
+    margin: 5px;
+    justify-content:space-between;
+    align-items: center;
+    font-size: medium;
+}
+
+#sourceUnit, #destinationUnit {
+    width: 70px;
+    margin-top: 10px;
+}
+
+.blob-outer {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    filter: blur(100px);
+}
+
+.blob-inner {
+    position: absolute;
+    border-radius: 99999px;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1000px;
+    overflow: hidden;
+    transform: scale(0.8);
+}
+
+.blob {
+    position: absolute;
+    border-radius: 99999px;
+    inset: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-image: conic-gradient(from 0deg, #FB4141, #2E5077, #F09319, #8D0B41, #7E1891, #355F2E, 
+        #024CAA, #00FF9C);
+    animation: spin 10s linear infinite; 
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) scale(2);
+    }    
+    100% {
+        transform: rotate(360deg) scale(2);
+    }
+}

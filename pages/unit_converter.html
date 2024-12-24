@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="../styles/unit_converter.css">
+</head>
+<body>
+    <div class="blob-outer">
+        <div class="blob-inner">
+            <div class="blob"></div>
+        </div>
+    </div>
+    <div class="unit-converter">
+        <h1>unit converter</h1>
+        <div class="unit-select">
+            <div class="length" onclick="converter.selectUnitType('length')">length</div>
+            <div class="area" onclick="converter.selectUnitType('area')">area</div>
+            <div class="volume" onclick="converter.selectUnitType('volume')">volume</div>
+            <div class="time" onclick="converter.selectUnitType('time')">time</div>
+            <div class="speed" onclick="converter.selectUnitType('speed')">speed</div>
+            <div class="mass" onclick="converter.selectUnitType('mass')">mass</div>
+            <div class="energy" onclick="converter.selectUnitType('energy')">energy</div>
+            <div class="pressure" onclick="converter.selectUnitType('pressure')">pressure</div>
+            <div class="data" onclick="converter.selectUnitType('data')">data</div>
+        </div>
+        <div class="input">
+            <label for="inputNumber">enter the measure to convert: </label>
+            <input type="number" id="input" name="input" placeholder="0">
+        </div>
+        <div class="source-destination-units">
+            <div class="source-unit">
+                <label for="sourceUnit">source unit:</label>
+                <select name="sourceUnit" id="sourceUnit"></select>
+            </div>
+           <div class="destination-unit">
+                <label for="destinationUnit">destination unit:</label>
+                <select name="destinationUnit" id="destinationUnit"></select>
+           </div>
+        </div>
+        <div class="output">
+            <label for="result">result: </label>
+            <input type="text" name="output" id="output" placeholder="0" readonly>
+        </div>
+        <div class="convert-clearall-buttons">
+            <div class="convert-button" onclick="converter.calculate()">convert</div>
+            <div class="clearall" onclick="converter.clearAll()">clear all</div>
+        </div>
+    </div>
+    <script src="../scripts/unit_converter.js"></script>
+</body>
+</html>
